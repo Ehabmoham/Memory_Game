@@ -7,6 +7,8 @@ let wrongTries = document.querySelector('.wrong-tries span');
 let checkArray  = [];
 let finishBox = document.querySelector('.finish');
 let restartBtn = document.querySelector('.finish button');
+let soundScuess = document.querySelector('#sucess');
+let soundFail = document.querySelector('#fail');
 
 let duration = 5;
 
@@ -46,6 +48,7 @@ gameBlock.forEach((block , index)=>{
                         flipedCards.forEach((card)=>{
                             card.classList.remove('fliped');
                             card.classList.add('sucsses');
+                            soundScuess.play();
                             checkArray =  [];
 
                         });
@@ -56,6 +59,7 @@ gameBlock.forEach((block , index)=>{
                         wrongTries.innerHTML = Number(wrongTries.textContent) + 1 / 2;  
                         flipedCards.forEach((card)=>{
                             card.classList.remove('fliped');
+                            soundFail.play();
                             checkArray =  [];
                         });
                       }, 500)
