@@ -159,3 +159,9 @@ body{
     font-weight: bold;
     cursor: pointer;
 }
+
+@media (max-width: 991px) {
+    .app{
+        width: 90%;
+    }
+}
